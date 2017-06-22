@@ -28,4 +28,23 @@ public class BeanTest {
 
     }
 
+    @Test
+    public void lifecycle() {
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(WebSpringBootApplication.class) ;
+
+        System.err.println("启动 AnnotationConfigApplicationContext ...");
+        ctx.start();
+
+        // 执行构造方法 ...
+        // 执行初始化方法 ...
+        // 销毁方法没见执行 ???
+        BeanLifecycle beanLifecycle = ctx.getBean(BeanLifecycle.class) ;
+        System.out.println(beanLifecycle);
+
+        // 启动 AnnotationConfigApplicationContext ...
+        // 停止 AnnotationConfigApplicationContext ...
+        System.err.println("停止 AnnotationConfigApplicationContext ...");
+        ctx.stop();
+    }
+
 }
