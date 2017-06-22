@@ -45,6 +45,11 @@ public class BeanTest {
         // 停止 AnnotationConfigApplicationContext ...
         System.err.println("停止 AnnotationConfigApplicationContext ...");
         ctx.stop();
+
+        // 关闭 AnnotationConfigApplicationContext ...
+        // 执行销毁方法 ...
+        System.err.println("关闭 AnnotationConfigApplicationContext ...");
+        ctx.close();
     }
 
 }
