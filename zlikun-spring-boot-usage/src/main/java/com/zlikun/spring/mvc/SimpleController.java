@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -20,6 +21,13 @@ public class SimpleController {
 //        System.err.println("程序运行根目录 -> " + request.getServletContext().getRealPath("/"));
 //        return "index" ;
 //    }
+
+    @RequestMapping("/index")
+    public ModelAndView index() {
+        ModelAndView mav = new ModelAndView("index") ;
+        mav.addObject("version" ,"1.0.0") ;
+        return mav ;
+    }
 
     @ResponseBody
     @RequestMapping("/users.json")
