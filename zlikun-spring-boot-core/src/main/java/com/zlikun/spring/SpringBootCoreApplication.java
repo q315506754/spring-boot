@@ -1,5 +1,6 @@
 package com.zlikun.spring;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -19,7 +20,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootCoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCoreApplication.class, args);
+		SpringApplication app = new SpringApplication(SpringBootCoreApplication.class) ;
+
+		// 关闭 Banner
+		app.setBannerMode(Banner.Mode.OFF);
+
+
+//		// 启动 spring-boot
+//		SpringApplication.run(SpringBootCoreApplication.class, args);
+		// 另一种启动方法
+		app.run(args) ;
 	}
 
 }
