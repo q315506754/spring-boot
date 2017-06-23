@@ -20,7 +20,8 @@
 
 	<modules>
 		<module>zlikun-spring-boot-usage</module>
-	</modules>
+        <module>zlikun-spring-boot-web</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
