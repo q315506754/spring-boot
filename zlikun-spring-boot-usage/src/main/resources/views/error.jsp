@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>Hello Spring Boot !</h1>
+    <h1>${errorMessage }</h1>
 
 </body>
 </html>

@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -34,12 +32,31 @@ public class MvcApplication extends WebMvcConfigurerAdapter {
         return resolver ;
     }
 
+    @Bean
+    public LoggerInterceptor loggerInterceptor() {
+        return new LoggerInterceptor() ;
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        super.addViewControllers(registry);
+        // 配置简易请求-视图控制器
+        registry.addViewController("/").setViewName("index");
+    }
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry);
         // 添加静态资源处理器
         // resourceHandler 配置对外访问路径，resourceLocations 配置文件存放目录
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/") ;
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
+        // 添加拦截器
+        registry.addInterceptor(loggerInterceptor()) ;
     }
 
     public static void main(String[] args) {

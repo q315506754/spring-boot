@@ -2,11 +2,11 @@ package com.zlikun.spring.mvc;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import javax.servlet.*;
+import java.util.EnumSet;
 
 /**
  * WebApplicationInitializer 接口是Spring提供用来配置Servlet 3.0+配置的接口，替代web.xml的作用<br>
@@ -21,6 +21,10 @@ public class WebInitializer implements WebApplicationInitializer {
         ctx.register(MvcApplication.class);
         // 新建WebApplicationContext，注册配置类，并将和当前servletContext关联
         ctx.setServletContext(servletContext) ;
+
+        // 注册字符集过滤器
+        FilterRegistration.Dynamic filter = servletContext.addFilter("encoding" ,new CharacterEncodingFilter("UTF-8" ,true)) ;
+        filter.addMappingForServletNames(EnumSet.of(DispatcherType.FORWARD ,DispatcherType.INCLUDE ,DispatcherType.REQUEST) ,true ,"dispatcher");
 
         // 注册Spring MVC 的DispatcherServlet
         ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher" ,new DispatcherServlet(ctx)) ;
