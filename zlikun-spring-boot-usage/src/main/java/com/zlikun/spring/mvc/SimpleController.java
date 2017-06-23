@@ -16,7 +16,7 @@ public class SimpleController {
 
     @RequestMapping("/")
     public String index(HttpServletRequest request) {
-        System.err.println(request.getServletContext().getRealPath("/"));
+        System.err.println("程序运行根目录 -> " + request.getServletContext().getRealPath("/"));
         return "index" ;
     }
 
