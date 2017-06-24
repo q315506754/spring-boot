@@ -20,6 +20,7 @@
 
 	<modules>
 		<module>zlikun-spring-boot-usage</module>
+		<module>zlikun-spring-boot-core</module>
         <module>zlikun-spring-boot-web</module>
     </modules>
 

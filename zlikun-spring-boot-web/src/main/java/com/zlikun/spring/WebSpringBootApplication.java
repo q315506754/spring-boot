@@ -13,8 +13,6 @@ public class WebSpringBootApplication extends WebMvcConfigurerAdapter {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WebSpringBootApplication.class, args);
-
-
 	}
 
 	/**
