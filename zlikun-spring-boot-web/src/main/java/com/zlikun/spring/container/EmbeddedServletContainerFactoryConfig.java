@@ -1,8 +1,10 @@
 package com.zlikun.spring.container;
 
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
+import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.TimeUnit;
 
@@ -31,6 +33,7 @@ public class EmbeddedServletContainerFactoryConfig {
         TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory() ;
         factory.setPort(10020);
         factory.setSessionTimeout(15 , TimeUnit.MINUTES);
+        factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND ,"/404.html"));
         return factory ;
     }
 
