@@ -1,5 +1,6 @@
 package com.zlikun.spring.container;
 
+import org.apache.catalina.connector.Connector;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.context.annotation.Bean;
@@ -28,14 +29,14 @@ public class EmbeddedServletContainerFactoryConfig {
 //        return factory ;
 //    }
 
-    @Bean
-    public TomcatEmbeddedServletContainerFactory tomcatServletContainerFactory() {
-        TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory() ;
-        factory.setPort(10020);
-        factory.setSessionTimeout(15 , TimeUnit.MINUTES);
-        factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND ,"/404.html"));
-        return factory ;
-    }
+//    @Bean
+//    public TomcatEmbeddedServletContainerFactory tomcatServletContainerFactory() {
+//        TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory() ;
+//        factory.setPort(10020);
+//        factory.setSessionTimeout(15 , TimeUnit.MINUTES);
+//        factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND ,"/404.html"));
+//        return factory ;
+//    }
 
 //    @Bean
 //    public UndertowEmbeddedServletContainerFactory undertowServletContainerFactory() {
