@@ -11,8 +11,7 @@
 		<appender-ref ref="STDOUT" />
 	</root>
 
-	<logger name="com.zlikun.spring" level="INFO" additivity="false">
-		<appender-ref ref="STDOUT" />
-	</logger>
+	<logger name="com.zlikun.spring" level="DEBUG" additivity="false" />
+	<logger name="org.springframework.jdbc" level="DEBUG" additivity="false" />
 
 </configuration>
