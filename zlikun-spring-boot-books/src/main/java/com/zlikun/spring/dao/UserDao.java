@@ -8,7 +8,7 @@ import com.zlikun.spring.model.User;
  */
 public interface UserDao {
 
-    User get(long userId) ;
+    User get(long id) ;
 
     User get(String mobile) ;
 

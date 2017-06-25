@@ -14,5 +14,5 @@ CREATE TABLE TBL_BOOK (
   NAME VARCHAR(256) COMMENT '图书名称' ,
   ISBN CHAR(13) COMMENT '图书ISBN号：图书产品代码“978”，组号(国家、地区、语言的代号)，出版者号，书序号和检验码几部分共同组成' ,
   PRICE FLOAT COMMENT '图书定价' ,
-  CTEIME DATETIME COMMENT '图书录入时间'
+  CTIME DATETIME COMMENT '图书录入时间'
 ) ;
