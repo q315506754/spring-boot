@@ -16,6 +16,10 @@ import java.util.Arrays;
 @RequestMapping("/users")
 public class UserController {
 
+    public UserController() {
+        System.err.println("xxxxxxxxxxxxxxxxxx");
+    }
+
     @RequestMapping("/{mobile}")
     public Object get(@PathVariable String mobile) {
 

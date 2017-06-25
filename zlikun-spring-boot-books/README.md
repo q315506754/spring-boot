@@ -10,7 +10,7 @@
 
 #### URI
 ```
-/users/$userId
+/users/$mobile
 /books/$name
 /books/query/$keywords
 /loan/users/$userId/books/$isbn
