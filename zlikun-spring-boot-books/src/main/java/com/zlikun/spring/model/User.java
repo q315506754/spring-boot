@@ -1,5 +1,6 @@
 package com.zlikun.spring.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.util.Date;
@@ -15,6 +16,7 @@ public class User {
     private String name ;
     private String mobile ;
     private String email ;
+    @JsonIgnore
     private String password ;
     private Date ctime ;
 
