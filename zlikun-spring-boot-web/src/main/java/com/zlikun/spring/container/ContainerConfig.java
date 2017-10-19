@@ -1,9 +1,7 @@
 package com.zlikun.spring.container;
 
-import org.springframework.boot.context.embedded.Compression;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 

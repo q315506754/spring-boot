@@ -1,13 +1,6 @@
 package com.zlikun.spring.container;
 
-import org.apache.catalina.connector.Connector;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
-import org.springframework.boot.web.servlet.ErrorPage;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpStatus;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  *

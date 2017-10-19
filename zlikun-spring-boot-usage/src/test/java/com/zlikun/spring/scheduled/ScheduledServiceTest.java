@@ -1,6 +1,5 @@
 package com.zlikun.spring.scheduled;
 
-import com.zlikun.spring.task.TaskConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
