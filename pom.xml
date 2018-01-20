@@ -33,6 +33,7 @@
 		<module>spring-boot-web</module>
 		<module>spring-boot-web-undertow</module>
 		<module>spring-boot-web-jetty</module>
+		<module>spring-boot-web-session</module>
 		<module>spring-boot-mvc-thymeleaf</module>
 	</modules>
 
