@@ -30,7 +30,8 @@
         <module>spring-boot-jdbc-druid</module>
         <module>spring-boot-jdbc-druid-multiple</module>
         <module>spring-boot-jdbc-tomcat</module>
-    </modules>
+		<module>spring-boot-web</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
