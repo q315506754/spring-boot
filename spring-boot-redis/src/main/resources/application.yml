@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: defult
+  redis:
+    url: redis://192.168.9.205:6379
+    pool:
+      min-idle: 10
+      max-active: 20
+      max-idle: 20
+      # 连接池满后，连接待超时毫秒数
+      max-wait: 1000
+    database: 2
+    # 连接超时毫秒数
+    timeout: 1800000
+logging:
+  level:
+    root: info

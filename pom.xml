@@ -24,10 +24,10 @@
         <module>zlikun-spring-boot-web</module>
         <module>zlikun-spring-boot-books</module>
 		<module>zlikun-spring-boot-multi-datasource</module>
-		<module>zlikun-spring-boot-redis</module>
         <module>spring-boot-starter</module>
 		<module>spring-boot-actuator</module>
-	</modules>
+        <module>spring-boot-redis</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
