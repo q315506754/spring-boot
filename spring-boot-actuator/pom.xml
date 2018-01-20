@@ -13,11 +13,13 @@
 
     <dependencies>
 
+        <!-- 引入 Actuator 监控端点服务支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+        <!-- 服务以HTTP请求方式提供(HTTP + JSON)，所以需要WEB支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
