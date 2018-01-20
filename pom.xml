@@ -29,6 +29,7 @@
         <module>spring-boot-redis</module>
         <module>spring-boot-redis-multiple</module>
         <module>spring-boot-jdbc-druid</module>
+        <module>spring-boot-jdbc-druid-multiple</module>
     </modules>
 
 	<properties>
