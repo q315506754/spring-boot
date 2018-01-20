@@ -23,13 +23,13 @@
 		<module>zlikun-spring-boot-core</module>
         <module>zlikun-spring-boot-web</module>
         <module>zlikun-spring-boot-books</module>
-		<module>zlikun-spring-boot-multi-datasource</module>
         <module>spring-boot-starter</module>
 		<module>spring-boot-actuator</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-redis-multiple</module>
         <module>spring-boot-jdbc-druid</module>
         <module>spring-boot-jdbc-druid-multiple</module>
+        <module>spring-boot-jdbc-tomcat</module>
     </modules>
 
 	<properties>
