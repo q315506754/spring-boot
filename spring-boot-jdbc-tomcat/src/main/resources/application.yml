@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: default
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql://192.168.9.223:3306/zlikun?characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: ablejava
+    name: zlikun
+    tomcat:
+      # 初始连接数
+      initial-size: 10
+      # 最小空闲数
+      min-idle: 10
+      # 最大空闲数
+      max-idle: 50
+      # 最大连接数
+      max-active: 50
+      # 连接等待超时时间，单位：毫秒
+      max-wait: 30000
+      # 登录超时时间(干嘛用的？第一次连接时登录的超时时间么？)
+      login-timeout: 3000
+      # 校验连接有效性查询SQL
+      validation-query: SELECT 1 FROM DUAL
+      # 校验连接超时时间，单位：毫秒
+      validation-query-timeout: 1000
+      # 是否在从连接池中取得连接时校验
+      test-on-borrow: false
+      # 是否在归还连接到连接池时校验
+      test-on-return: false
+      # 是否在连接时校验
+      test-on-connect: false
+      # 是否在连接空闲时校验
+      test-while-idle: true
+      # 检测需要关闭空闲连接间隔时间，单位：毫秒
+      time-between-eviction-runs-millis: 60000
+      # 一个连接在池中最小生存时间（空闲状态），单位：毫秒
+      min-evictable-idle-time-millis: 300000

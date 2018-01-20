@@ -1,0 +1,24 @@
+logging:
+  level:
+    root: info
+    org.springframework.web.servlet: warn
+    org.springframework.boot.web.servlet: warn
+    org.springframework.boot.actuate.endpoint: warn
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%logger){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: true
+server:
+  port: 80
+  undertow:
+    accesslog:
+      enabled: true
+spring:
+  profiles:
+    active: default
+management:
+  security:
+    enabled: false

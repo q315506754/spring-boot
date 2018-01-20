@@ -31,6 +31,7 @@
         <module>spring-boot-jdbc-druid-multiple</module>
         <module>spring-boot-jdbc-tomcat</module>
 		<module>spring-boot-web</module>
+		<module>spring-boot-web-undertow</module>
 	</modules>
 
 	<properties>
