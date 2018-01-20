@@ -27,6 +27,7 @@
         <module>spring-boot-starter</module>
 		<module>spring-boot-actuator</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-redis-multiple</module>
     </modules>
 
 	<properties>

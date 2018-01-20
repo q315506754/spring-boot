@@ -14,7 +14,7 @@ import org.springframework.data.redis.core.RedisTemplate;
  * @date 2018-01-20 14:18
  */
 @Configuration
-@EnableCaching
+@EnableCaching  // 开启AOP缓存支持
 public class CacheConfigure {
 
     @Autowired
