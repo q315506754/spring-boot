@@ -1,0 +1,23 @@
+logging:
+  level:
+    root: info
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: true
+server:
+  port: 80
+spring:
+  profiles:
+    active: default
+info:
+  author: zlikun
+  version: v1.0.0
+  tags:
+    - spring
+    - hadoop
+    - docker
+management:
+  security:
+    enabled: false

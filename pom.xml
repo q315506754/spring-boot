@@ -26,7 +26,8 @@
 		<module>zlikun-spring-boot-multi-datasource</module>
 		<module>zlikun-spring-boot-redis</module>
         <module>spring-boot-starter</module>
-    </modules>
+		<module>spring-boot-actuator</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
