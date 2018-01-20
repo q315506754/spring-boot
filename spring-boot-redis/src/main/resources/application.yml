@@ -12,6 +12,12 @@ spring:
     database: 2
     # 连接超时毫秒数
     timeout: 1800000
+  # 配置 spring-cache (CacheManager)，默认可以不配置
+  cache:
+    cache-names:
+      - service
+      - api
+    type: redis
 logging:
   level:
     root: info
