@@ -35,6 +35,7 @@
 		<module>spring-boot-web-jetty</module>
 		<module>spring-boot-web-session</module>
 		<module>spring-boot-mvc-thymeleaf</module>
+		<module>spring-boot-rabbitmq</module>
 	</modules>
 
 	<properties>
