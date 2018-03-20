@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.9.RELEASE</version>
+		<version>1.5.10.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -36,7 +36,8 @@
 		<module>spring-boot-web-session</module>
 		<module>spring-boot-mvc-thymeleaf</module>
 		<module>spring-boot-rabbitmq</module>
-	</modules>
+        <module>spring-boot-jdbc-mybatis</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

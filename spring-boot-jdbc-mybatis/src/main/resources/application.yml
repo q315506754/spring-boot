@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: default
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql://192.168.9.223:3306/zlikun?characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: ablejava
+    name: zlikun
+    tomcat:
+      initial-size: 10
+      min-idle: 10
+      max-idle: 50
+      max-active: 50
+      max-wait: 30000
+      login-timeout: 3000
+      validation-query: SELECT 1 FROM DUAL
+      validation-query-timeout: 1000
+      test-on-borrow: false
+      test-on-return: false
+      test-on-connect: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+    schema: classpath:script/schema.sql
+    data: classpath:script/data.sql
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zlikun.spring.model
+  type-handlers-package: com.zlikun.spring.mapper.handler
+#  config-location: classpath:mybatis.xml
